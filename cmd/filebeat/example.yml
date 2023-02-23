@@ -1,0 +1,13 @@
+filebeat.inputs:
+  - type: log
+    paths:
+      - example/example.log
+
+
+processors:
+  - parse_text:
+      file_has_suffix: example.log
+
+
+output.console:
+  pretty: true
